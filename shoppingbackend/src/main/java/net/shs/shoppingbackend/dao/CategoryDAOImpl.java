@@ -41,5 +41,14 @@ public class CategoryDAOImpl implements CategoryDAO {
 		// TODO Auto-generated method stub
 		return categories;
 	}
+	@Override
+	public Category get(int id) {
+		//enhanced for loop if id matched then return id otherwise return null
+		for(Category category:categories){
+			if(category.getId()==id)
+				return category;
+		}
+		return null;
+	}
 
 }
