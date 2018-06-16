@@ -10,7 +10,7 @@
 	</div>
 	<!--create another column to display the actual products  -->
 	<div class="col-md-9">
-		<%-- <!--added breadcrumb component(it is a readymade bootstrap class)   -->
+		<!--added breadcrumb component(it is a readymade bootstrap class)   -->
 		<div classs="row">
 			<div class="col-lg-12">
 			<c:if test="${userClickAllProducts==true}">
@@ -28,7 +28,7 @@
 				</ol>
 			</c:if>
 			</div>
-	 --%>	
+		
 		</div>
 	
 	
