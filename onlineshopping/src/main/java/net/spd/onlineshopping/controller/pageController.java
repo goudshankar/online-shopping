@@ -60,10 +60,13 @@ public class pageController {
 		Category category=null;
 		category=categoryDao.get(id);
 		//add mav object to display on the console
-		mv.addObject("title","Home");
+		mv.addObject("title",category.getName());
+		
 		//passing the list of categories
 		mv.addObject("categories",categoryDao.list());
-		mv.addObject("userClickHome",true);
+		//pass the signle category object 
+		mv.addObject("category",category);
+		mv.addObject("userClickCategoryProducts",true);
 		return mv;
 	}
 }
