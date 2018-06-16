@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.shs.shoppingbackend.dto.Category;
 
-public interface CategoryDao {
+public interface CategoryDAO {
 
 	List<Category> list();
 }

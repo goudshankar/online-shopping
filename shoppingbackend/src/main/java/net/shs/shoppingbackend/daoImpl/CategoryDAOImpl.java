@@ -1,11 +1,15 @@
-package net.shs.shoppingbackend.dao;
+package net.shs.shoppingbackend.daoImpl;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
+import net.shs.shoppingbackend.dao.CategoryDAO;
 import net.shs.shoppingbackend.dto.Category;
 
-public class CategoryDaoImpl implements CategoryDao {
+@Repository("categoryDao")
+public class CategoryDAOImpl implements CategoryDAO {
 	private static List<Category> categories=new ArrayList<>();
 	static {
 		//adding first category
@@ -31,10 +35,6 @@ public class CategoryDaoImpl implements CategoryDao {
 		//add third category to list object
 		categories.add(category);
 	}
-	
-	
-	
-	@Override
 	public List<Category> list() {
 		// TODO Auto-generated method stub
 		return categories;
