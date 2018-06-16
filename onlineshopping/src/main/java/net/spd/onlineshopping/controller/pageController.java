@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import net.shs.shoppingbackend.dao.CategoryDAO;
+
+
 	
 	
 
@@ -14,7 +16,6 @@ import net.shs.shoppingbackend.dao.CategoryDAO;
 public class pageController {
 	
 	@Autowired
-	@Qualifier("categoryDao")
 	private CategoryDAO  categoryDao;
 	
 	@RequestMapping(value= {"/","/home","/index"})
