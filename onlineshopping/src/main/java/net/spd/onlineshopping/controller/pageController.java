@@ -67,6 +67,6 @@ public class pageController {
 		//pass the signle category object 
 		mv.addObject("category",category);
 		mv.addObject("userClickCategoryProducts",true);
-		return mv;
+		return mv;		
 	}
 }
