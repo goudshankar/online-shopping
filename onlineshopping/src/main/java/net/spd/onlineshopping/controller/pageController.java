@@ -36,14 +36,14 @@ public class pageController {
 		mv.addObject("userClickAbout",true);
 		return mv;
 	}
-	@RequestMapping(value= "contact")
+	@RequestMapping(value={"contact"})
 	public ModelAndView contact() {
 		ModelAndView mv=new ModelAndView("page");
 		mv.addObject("title","ContactUs");
 		mv.addObject("userClickContact",true);
 		return mv;
 	}
-	@RequestMapping(value= "/show/all/products")
+	@RequestMapping(value= {"/show/all/products"})
 	public ModelAndView showAllProducts() {
 		ModelAndView mv=new ModelAndView("page");
 		//add mav object to display on the console
@@ -53,7 +53,7 @@ public class pageController {
 		mv.addObject("userClickAllProducts",true);
 		return mv;
 	}
-	@RequestMapping(value= "/show/category/{id}/products")
+	@RequestMapping(value= {"/show/category/{id}/products"})
 	public ModelAndView showCategoryProducts(@PathVariable("id")int id) {
 		ModelAndView mv=new ModelAndView("page");
 		//we use categoryDAO to fetch single category

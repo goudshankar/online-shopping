@@ -37,19 +37,23 @@
 		<%@include file="./shared/navbar.jsp"%>
 		<!-- Page Content -->
 	
-			<!--Home page  -->
+			<!--Loading the home content  -->
 			<c:if test="${userClickHome ==true}">
 				<%@include file="home.jsp"%>
 			</c:if>
-			<!--AboutUs page  -->
+			<!--Loading only when user clik about  -->
 			<c:if test="${userClickAbout ==true}">
 				<%@include file="about.jsp"%>
 			</c:if>
-			<!--ContactUs page  -->
+			<!--Loading only when user click Contact  -->
 			<c:if test="${userClickContact ==true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-	
+			<!--Loading only when user click AllProducts  -->
+			<c:if test="${userClickAllProducts ==true or userClickCategoryProducts ==true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+				
 		<!-- Footer -->
 
 		<%@include file="./shared/footer.jsp"%>
