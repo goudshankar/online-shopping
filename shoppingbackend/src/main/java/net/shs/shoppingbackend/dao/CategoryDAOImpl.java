@@ -10,12 +10,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import net.shs.shoppingbackend.dto.Category;
 
-@Repository("categoryDao")
+@Repository("categoryDAO")
 public class CategoryDAOImpl implements CategoryDAO {
 	
-		@Autowired
-		private SessionFactory sessionFactory;
-	
+	@Autowired
+	private  SessionFactory sessionFactory;
 	private static List<Category> categories=new ArrayList<>();
 	static {
 		//adding first category
@@ -42,7 +41,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 		category.setImageURL("Cat_3.png");
 		//add third category to list object
 		categories.add(category);
-	}
+	}  
 	public List<Category> list() {
 		// TODO Auto-generated method stub
 		return categories;
@@ -56,20 +55,20 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 		return null;
 	}
+	
 	@Override
 	@Transactional
 	public boolean add(Category category) {
 		try {
 			//add the category to the database table
 			sessionFactory.getCurrentSession().persist(category);
-			
 			return true;
 		}
 		catch(Exception ex) {
 			ex.printStackTrace();
 			return false;
 		}
-		
-	}
+
+	}		
 
 }
